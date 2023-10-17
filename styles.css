@@ -1,0 +1,14 @@
+body {
+  font-family: "Times New Roman", Times, serif;
+}
+
+html {
+  background-color: #f0ead6;
+}
+#cal_canvas{
+  padding: 0px 40px;
+}
+#quote{
+  text-align: center;
+  padding: 10px 0px;
+}
