@@ -6,7 +6,6 @@ export default function IndexPage() {
   const router = useRouter();
   const [title, setTitle] = useState("Alice");
   const [dateOfBirth, setDateOfBirth] = useState("2006-01-01");
-  const [age, setAge] = useState("80");
 
   return (
     <Theme>
@@ -17,7 +16,7 @@ export default function IndexPage() {
           router.push(
             `/calendar?dob=${encodeURIComponent(
               dateOfBirth
-            )}&age=${encodeURIComponent(age)}&title=${encodeURIComponent(title)}`
+            )}&age=${encodeURIComponent("80")}&title=${encodeURIComponent(title)}`
           );
         }}
       >

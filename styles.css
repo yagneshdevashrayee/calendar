@@ -5,10 +5,15 @@ body {
 html {
   background-color: #f0ead6;
 }
-#cal_canvas{
+.canvas_wrapper{
   padding: 0px 40px;
 }
 #quote{
   text-align: center;
   padding: 10px 0px;
+}
+.calendar{
+  text-align: center !important;
+    width: 60% !important;
+    margin: auto !important;
 }

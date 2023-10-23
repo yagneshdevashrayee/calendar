@@ -17,7 +17,6 @@ export default function Calendar({
   yearsToLive,
   yearsAndWeeksSinceBirth: [yearIndex, weekIndex],
 }: CalendarProps) {
-
   return (
     <div className="calendar">
       {[...Array(yearsToLive)].map((_, index) => {

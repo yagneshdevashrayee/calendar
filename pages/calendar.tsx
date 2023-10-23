@@ -15,15 +15,13 @@ type CalendarPageProps = {
 };
 
 export default function CalendarPage({ title,age, dob }: CalendarPageProps) {
-  console.log("tit",title)
-  console.log("age",age)
-  console.log("dob",dob)
   const yearsAndWeeksSinceBirth = yearsAndWeeksSinceDate(new Date(dob));
-  const [downloadFlag, setDownloadFlag] = useState(false)
+  const [downloadFlag, setDownloadFlag] = useState(false);
+  const element = document.querySelector("#cal_canvas")! as HTMLElement;
   useEffect(()=>{
     if(document){
       document!.getElementById("downloadBtn")!.addEventListener("click", () => {
-        html2canvas(document.querySelector("#cal_canvas")!).then((canvas: any) => {
+        html2canvas(element!).then((canvas: any) => {
           let anchorTag = document.createElement("a");
           document.body.appendChild(anchorTag);
           anchorTag.download = `atmaniriksanam_${new Date()}.png`;
@@ -39,21 +37,30 @@ export default function CalendarPage({ title,age, dob }: CalendarPageProps) {
   return (
     <Theme>
       <div id="cal_canvas">
-      <h1>{title}</h1>
-      <Calendar
-        yearsToLive={age}
-        yearsAndWeeksSinceBirth={yearsAndWeeksSinceBirth}
-      />
-       <div id="quote">
-      <cite id="cite-quote">
-       Zindagi na milegi dobara
-      </cite>
-    </div>
+        <div className="canvas_wrapper">
+        <h1>{title}</h1>
+        <Calendar
+          yearsToLive={age}
+          yearsAndWeeksSinceBirth={yearsAndWeeksSinceBirth}
+        />
+        <div id="quote">
+          <cite id="cite-quote">
+            आत्मज्ञान समारम्भस्तितिक्षा धर्मनित्यता । यमर्थान्नापकर्षन्ति स वै
+            पण्डित उच्यते ॥
+            <i><br/>
+              Self-knowledge, Initiative, Forbearance, Steadfast in core values
+              (helped by these four) who is not distracted from goal, that is
+              called a wise person.
+            </i>
+          </cite>
+        </div>
+        </div>
+
       </div>
-    
-      <div className="download" onClick={()=>setDownloadFlag(true)}>
-    <button id="downloadBtn">Download Calender!</button>
-  </div>
+
+      <div className="download" onClick={() => setDownloadFlag(true)}>
+        <button id="downloadBtn">Download Calender!</button>
+      </div>
       <style jsx>
         {`
           h1 {
