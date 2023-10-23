@@ -44,13 +44,12 @@ export default function CalendarPage({ title,age, dob }: CalendarPageProps) {
           yearsAndWeeksSinceBirth={yearsAndWeeksSinceBirth}
         />
         <div id="quote">
-          <cite id="cite-quote">
-            आत्मज्ञान समारम्भस्तितिक्षा धर्मनित्यता । यमर्थान्नापकर्षन्ति स वै
-            पण्डित उच्यते ॥
+        <cite id="cite-quote">
+          It is not that we have a short time to live, but we waste much of it.<br/> Life is long enough, and it has been given in sufficiently generous measure to allow the achievement of very greatest things if the whole of it is well invested.
             <i><br/>
-              Self-knowledge, Initiative, Forbearance, Steadfast in core values
+              {/* Self-knowledge, Initiative, Forbearance, Steadfast in core values
               (helped by these four) who is not distracted from goal, that is
-              called a wise person.
+              called a wise person. */}
             </i>
           </cite>
         </div>
