@@ -6,6 +6,7 @@ export default function IndexPage() {
   const router = useRouter();
   const [title, setTitle] = useState("Alice");
   const [dateOfBirth, setDateOfBirth] = useState("2006-01-01");
+  const [age, setAge] = useState("80");
 
   return (
     <Theme>
@@ -16,7 +17,7 @@ export default function IndexPage() {
           router.push(
             `/calendar?dob=${encodeURIComponent(
               dateOfBirth
-            )}&age=${encodeURIComponent("80")}&title=${encodeURIComponent(title)}`
+            )}&age=${encodeURIComponent(age)}&title=${encodeURIComponent(title)}`
           );
         }}
       >
@@ -37,6 +38,15 @@ export default function IndexPage() {
               value={dateOfBirth}
               onChange={(e) => setDateOfBirth(e.target.value)}
               type="date"
+            ></input>
+          </div>
+          <div className="form-control">
+            <label className="label">Age Upto:</label>
+            <input
+              className="input"
+              value={age}
+              onChange={(e) => setAge(e.target.value)}
+              type="number"
             ></input>
           </div>
           <button>Generate Calendar</button>
