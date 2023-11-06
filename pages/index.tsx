@@ -4,8 +4,8 @@ import { useRouter } from "next/router";
 
 export default function IndexPage() {
   const router = useRouter();
-  const [title, setTitle] = useState("Alice");
-  const [dateOfBirth, setDateOfBirth] = useState("2006-01-01");
+  const [title, setTitle] = useState("Ved");
+  const [dateOfBirth, setDateOfBirth] = useState("1996-01-30");
   const [age, setAge] = useState("80");
 
   return (

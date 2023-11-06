@@ -33,5 +33,16 @@
   },
   "lint-staged": {
     "*.{js,css,md}": "prettier --write"
-  }
+  },
+  "description": "",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yagneshdevashrayee/calendar.git"
+  },
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/yagneshdevashrayee/calendar/issues"
+  },
+  "homepage": "https://github.com/yagneshdevashrayee/calendar#readme"
 }

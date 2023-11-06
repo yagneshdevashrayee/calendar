@@ -32,9 +32,9 @@ export default function WeekRow({ label, fillIndex, hasGap }: WeekRowProps) {
         }
 
         .week {
-          margin: 1px;
-          height: 2px;
-          width: 2px;
+          margin: 2.5px;
+          height: 3px;
+          width: 3px;
           border: 1px solid ${darkGrey};
           border-radius : 100%;
         }
